@@ -1,7 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>http://blog.meekdai.com</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>http://blog.meekdai.com</link></image><lastBuildDate>Mon, 26 Aug 2024 09:06:31 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>创建自己的blog</title><link>http://blog.meekdai.com/post/chuang-jian-zi-ji-de-blog.html</link><description># 基本方法&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>http://blog.meekdai.com</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>http://blog.meekdai.com</link></image><lastBuildDate>Mon, 26 Aug 2024 11:49:24 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>创建自己的blog</title><link>http://blog.meekdai.com/post/chuang-jian-zi-ji-de-blog.html</link><description># 基本方法&#13;
 1. CSDN，少数派等网站上发表&#13;
 - 适用：小白&#13;
 - 优点：速度快，且有优质的GUI界面&#13;
-2.  利用github page为线上服务器，根据别人的框架搭建自己的blog（本blog基于）&#13;
-- 适用：有一定了解。</description><guid isPermaLink="true">http://blog.meekdai.com/post/chuang-jian-zi-ji-de-blog.html</guid><pubDate>Mon, 26 Aug 2024 06:30:53 +0000</pubDate></item></channel></rss>
+2.  利用github page为线上服务器，根据别人的框架搭建自己的blog&#13;
+- 适用：有一定了解的初学者&#13;
+- 优点：便捷，可以进行个性化设计，更加聚焦于自己知识库的搭建&#13;
+3. 利用hexo搭建&#13;
+-没有选择的原因：比较复杂，需要下载node.js，利用npm命令下载hexo，还有很多配置的指令，对于初学者每一步都比较麻烦，而且得不到成长，建立一个blog我觉得最重要的就是尽快弄出来，搭建一个简易的框架，之后再进行丰满&#13;
+&#13;
+---&#13;
+&#13;
+# [基于Gmeek搭建](https://blog.meekdai.com/)&#13;
+## 跟着教程走遇见的一些问题&#13;
+1. 。</description><guid isPermaLink="true">http://blog.meekdai.com/post/chuang-jian-zi-ji-de-blog.html</guid><pubDate>Mon, 26 Aug 2024 06:30:53 +0000</pubDate></item></channel></rss>
