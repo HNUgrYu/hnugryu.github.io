@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>http://blog.meekdai.com</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>http://blog.meekdai.com</link></image><lastBuildDate>Mon, 26 Aug 2024 11:55:40 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>创建自己的blog</title><link>http://blog.meekdai.com/post/chuang-jian-zi-ji-de-blog.html</link><description># 基本方法&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Mon, 26 Aug 2024 12:18:34 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>更新日志</title><link>https://hnugryu.github.io//post/geng-xin-ri-zhi.html</link><description>**240826（v1.0）**&#13;
+搭建了自己的blog，添加了目录栏及一些小插件，解决了一些小的问题。</description><guid isPermaLink="true">https://hnugryu.github.io//post/geng-xin-ri-zhi.html</guid><pubDate>Mon, 26 Aug 2024 11:20:02 +0000</pubDate></item><item><title>创建自己的blog</title><link>https://hnugryu.github.io//post/chuang-jian-zi-ji-de-blog.html</link><description># 基本方法&#13;
 1. CSDN，少数派等网站上发表&#13;
 - 适用：小白&#13;
 - 优点：速度快，且有优质的GUI界面&#13;
@@ -18,4 +19,4 @@
 2. 怎么样更换自己喜欢的头像&#13;
 - [图片库](https://ie.pinterest.com/)&#13;
 - 下载到自己的github仓库下面，点击raw图，复制其地址到配置文件中&#13;
-。</description><guid isPermaLink="true">http://blog.meekdai.com/post/chuang-jian-zi-ji-de-blog.html</guid><pubDate>Mon, 26 Aug 2024 06:30:53 +0000</pubDate></item></channel></rss>
+。</description><guid isPermaLink="true">https://hnugryu.github.io//post/chuang-jian-zi-ji-de-blog.html</guid><pubDate>Mon, 26 Aug 2024 06:30:53 +0000</pubDate></item></channel></rss>
