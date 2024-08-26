@@ -12,4 +12,8 @@
 
 # [基于Gmeek搭建](https://blog.meekdai.com/)
 ## 跟着教程走遇见的一些问题
-1. 
+1. 更新action失败：
+- 配置文件中缺少 `,`
+2. 怎么样更换自己喜欢的头像
+- [图片库](https://ie.pinterest.com/)
+- 下载到自己的github仓库下面，点击raw图，复制其地址到配置文件中
