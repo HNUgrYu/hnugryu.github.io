@@ -36,8 +36,7 @@
 "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekBSZ.js'></script>",
 "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>",
 "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
-"custom_css": "style.css",
-"custom_style": "<style>body { background-image: url('https://i.pinimg.com/736x/b4/c6/98/b4c6981ae3ae9c12bdc9c15736b997c1.jpg'); }</style>"
+"custom_style": "<style>body { background-image: url('https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/image.png?raw=true'); }</style>"
 
 
 }
