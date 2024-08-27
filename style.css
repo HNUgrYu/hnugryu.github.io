@@ -1,8 +1,6 @@
 body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    background-image: url('https://i.pinimg.com/474x/b4/c6/98/b4c6981ae3ae9c12bdc9c15736b997c1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-h1 {
-    color: #333;
-}
