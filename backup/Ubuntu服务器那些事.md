@@ -68,12 +68,18 @@ source ~/.bashrc``
 lo：本地地址
 enp4s0：物联网地址，pci接口连接的网线
 wlo1：wifi 
--修改文件：sudo nano <filename>
+- 看网络连接状态： ` ip a` inet后面接的第一个是系统地址，第二个是广播地址
+- 静态地址和动态地址（静态地址需要`ipconfig`来看相关地址，动态用dhpc4配置）
+- 修改文件：`sudo nano <filename>`nano文件需要保证严格的缩进
+- 运行netplan文件： ` sudo netplan try `
 > 在修改了无数次netplan的配置文件后，了解了ip地址，dns，网关，掩码是什么，知道了ubuntu系统的基本操作，翻阅了官方的文档，仍然连网路连接的问题都解决不了
 > 如果你还在和我一样因为server服务器更适合跑程序的这个优点而选择了他，自身对其没有了解的话，尽快跑吧，隔壁ubuntu桌面版程序都跑完了你还在配置呢
 
 ### ubuntu系统那些事
 > 嗖的一下就安装完了
-
+`sudo apt update`
+`sudo apt upgrade`
+‘sudo install  openssh-server’
+就可以继续使用finalshell连接了
 
 

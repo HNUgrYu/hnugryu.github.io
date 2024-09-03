@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Tue, 03 Sep 2024 12:22:46 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>Ubuntu服务器那些事</title><link>https://hnugryu.github.io//post/Ubuntu-fu-wu-qi-na-xie-shi.html</link><description># Ubuntu服务器的使用说明&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Tue, 03 Sep 2024 12:57:40 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>Ubuntu服务器那些事</title><link>https://hnugryu.github.io//post/Ubuntu-fu-wu-qi-na-xie-shi.html</link><description># Ubuntu服务器的使用说明&#13;
 ## 使用finalshell连接windows主机和服务器&#13;
 &gt; 本质上是利用ssh连接&#13;
 ### 连接步骤&#13;
@@ -69,13 +69,19 @@ source ~/.bashrc``&#13;
 lo：本地地址&#13;
 enp4s0：物联网地址，pci接口连接的网线&#13;
 wlo1：wifi &#13;
--修改文件：sudo nano &lt;filename&gt;&#13;
+- 看网络连接状态： ` ip a` inet后面接的第一个是系统地址，第二个是广播地址&#13;
+- 静态地址和动态地址（静态地址需要`ipconfig`来看相关地址，动态用dhpc4配置）&#13;
+- 修改文件：`sudo nano &lt;filename&gt;`nano文件需要保证严格的缩进&#13;
+- 运行netplan文件： ` sudo netplan try `&#13;
 &gt; 在修改了无数次netplan的配置文件后，了解了ip地址，dns，网关，掩码是什么，知道了ubuntu系统的基本操作，翻阅了官方的文档，仍然连网路连接的问题都解决不了&#13;
 &gt; 如果你还在和我一样因为server服务器更适合跑程序的这个优点而选择了他，自身对其没有了解的话，尽快跑吧，隔壁ubuntu桌面版程序都跑完了你还在配置呢&#13;
 &#13;
 ### ubuntu系统那些事&#13;
 &gt; 嗖的一下就安装完了&#13;
-&#13;
+`sudo apt update`&#13;
+`sudo apt upgrade`&#13;
+‘sudo install  openssh-server’&#13;
+就可以继续使用finalshell连接了&#13;
 &#13;
 &#13;
 。</description><guid isPermaLink="true">https://hnugryu.github.io//post/Ubuntu-fu-wu-qi-na-xie-shi.html</guid><pubDate>Sun, 01 Sep 2024 04:24:23 +0000</pubDate></item><item><title>摘句</title><link>https://hnugryu.github.io//post/zhai-ju.html</link><description>### 我所见的，所想的，都会成为我灵魂的一部分永远陪着我&#13;
