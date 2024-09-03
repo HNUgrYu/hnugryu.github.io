@@ -52,8 +52,6 @@ source ~/.bashrc``
 
 
 ## 系统炸了~不嘻嘻
-### http://mirrors.tuna.tsinghua.edu.cn/ubuntu/
-
 ### 重装ubuntu系统
 1. 官网安装iso镜像文件
 > 分为server和desktop版本，server全是命令行，更贴近于服务器的功能
@@ -71,8 +69,11 @@ lo：本地地址
 enp4s0：物联网地址，pci接口连接的网线
 wlo1：wifi 
 -修改文件：sudo nano <filename>
--
-问题2：怎么完成基础设置，从而实现服务器的功能
+> 在修改了无数次netplan的配置文件后，了解了ip地址，dns，网关，掩码是什么，知道了ubuntu系统的基本操作，翻阅了官方的文档，仍然连网路连接的问题都解决不了
+> 如果你还在和我一样因为server服务器更适合跑程序的这个优点而选择了他，自身对其没有了解的话，尽快跑吧，隔壁ubuntu桌面版程序都跑完了你还在配置呢
+
+### ubuntu系统那些事
+> 嗖的一下就安装完了
 
 
 
