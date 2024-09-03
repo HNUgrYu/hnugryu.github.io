@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Tue, 03 Sep 2024 12:57:40 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>Ubuntu服务器那些事</title><link>https://hnugryu.github.io//post/Ubuntu-fu-wu-qi-na-xie-shi.html</link><description># Ubuntu服务器的使用说明&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Tue, 03 Sep 2024 13:54:54 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>Ubuntu服务器那些事</title><link>https://hnugryu.github.io//post/Ubuntu-fu-wu-qi-na-xie-shi.html</link><description># Ubuntu服务器的使用说明&#13;
 ## 使用finalshell连接windows主机和服务器&#13;
 &gt; 本质上是利用ssh连接&#13;
 ### 连接步骤&#13;
@@ -80,9 +80,16 @@ wlo1：wifi &#13;
 &gt; 嗖的一下就安装完了&#13;
 `sudo apt update`&#13;
 `sudo apt upgrade`&#13;
-‘sudo install  openssh-server’&#13;
+`sudo install  openssh-server`&#13;
 就可以继续使用finalshell连接了&#13;
 &#13;
+### barrier的安装&#13;
+&gt; 随着barrier的安装，意味着本次的服务器事件已经到达了第一个里程碑，终于不用再两个电脑来回切换键盘和鼠标了，欣喜若狂&#13;
+总结：&#13;
+1. 要把linux系统作为主机，windows作为客机&#13;
+2. 学会看日志找到自己当前的问题&#13;
+3. 在设置里禁用ssl，或者自己弄一个ca证书&#13;
+4. 端口可能被占用，24800改为24801试试&#13;
 &#13;
 。</description><guid isPermaLink="true">https://hnugryu.github.io//post/Ubuntu-fu-wu-qi-na-xie-shi.html</guid><pubDate>Sun, 01 Sep 2024 04:24:23 +0000</pubDate></item><item><title>摘句</title><link>https://hnugryu.github.io//post/zhai-ju.html</link><description>### 我所见的，所想的，都会成为我灵魂的一部分永远陪着我&#13;
 &#13;

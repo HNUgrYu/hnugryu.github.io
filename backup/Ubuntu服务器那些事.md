@@ -79,7 +79,14 @@ wlo1：wifi
 > 嗖的一下就安装完了
 `sudo apt update`
 `sudo apt upgrade`
-‘sudo install  openssh-server’
+`sudo install  openssh-server`
 就可以继续使用finalshell连接了
 
+### barrier的安装
+> 随着barrier的安装，意味着本次的服务器事件已经到达了第一个里程碑，终于不用再两个电脑来回切换键盘和鼠标了，欣喜若狂
+总结：
+1. 要把linux系统作为主机，windows作为客机
+2. 学会看日志找到自己当前的问题
+3. 在设置里禁用ssl，或者自己弄一个ca证书
+4. 端口可能被占用，24800改为24801试试
 
