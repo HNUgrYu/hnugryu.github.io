@@ -92,8 +92,15 @@ wlo1：wifi
 
 ### 下载搜狗输入法
 1. 安装框架` sudo apt-get install fcitx`
-2. 解压`sogou sudo dpkg -i sogoupinyin_版本号_amd64.deb`
+2. 解压`sudo dpkg -i sogoupinyin_版本号_amd64.deb`
 3. 下载依赖项` sudo apt -f install`
 4. 系统里调整fcitx为默认框架
 5. 卸载 `ibus sudo apt purge ibus`
 6. 重启
+
+### 更改清华源地址
+`etc/apt/sources.list.d/ubuntu.sources`
+
+### 下载软件无法直接安装
+1. 用sudo指令在终端安装
+2. 把自己的用户该为管理者权限`sudo usermod -aG sudo username`
