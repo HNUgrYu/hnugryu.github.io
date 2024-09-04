@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Tue, 03 Sep 2024 13:54:54 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>Ubuntu服务器那些事</title><link>https://hnugryu.github.io//post/Ubuntu-fu-wu-qi-na-xie-shi.html</link><description># Ubuntu服务器的使用说明&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Wed, 04 Sep 2024 01:53:08 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>Ubuntu服务器那些事</title><link>https://hnugryu.github.io//post/Ubuntu-fu-wu-qi-na-xie-shi.html</link><description># Ubuntu服务器的使用说明&#13;
 ## 使用finalshell连接windows主机和服务器&#13;
 &gt; 本质上是利用ssh连接&#13;
 ### 连接步骤&#13;
@@ -91,7 +91,13 @@ wlo1：wifi &#13;
 3. 在设置里禁用ssl，或者自己弄一个ca证书&#13;
 4. 端口可能被占用，24800改为24801试试&#13;
 &#13;
-。</description><guid isPermaLink="true">https://hnugryu.github.io//post/Ubuntu-fu-wu-qi-na-xie-shi.html</guid><pubDate>Sun, 01 Sep 2024 04:24:23 +0000</pubDate></item><item><title>摘句</title><link>https://hnugryu.github.io//post/zhai-ju.html</link><description>### 我所见的，所想的，都会成为我灵魂的一部分永远陪着我&#13;
+### 下载搜狗输入法&#13;
+1. 安装框架` sudo apt-get install fcitx`&#13;
+2. 解压`sogou sudo dpkg -i sogoupinyin_版本号_amd64.deb`&#13;
+3. 下载依赖项` sudo apt -f install`&#13;
+4. 系统里调整fcitx为默认框架&#13;
+5. 卸载 `ibus sudo apt purge ibus`&#13;
+6. 重启。</description><guid isPermaLink="true">https://hnugryu.github.io//post/Ubuntu-fu-wu-qi-na-xie-shi.html</guid><pubDate>Sun, 01 Sep 2024 04:24:23 +0000</pubDate></item><item><title>摘句</title><link>https://hnugryu.github.io//post/zhai-ju.html</link><description>### 我所见的，所想的，都会成为我灵魂的一部分永远陪着我&#13;
 &#13;
 ---&#13;
 &#13;

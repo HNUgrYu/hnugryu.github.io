@@ -90,3 +90,10 @@ wlo1：wifi
 3. 在设置里禁用ssl，或者自己弄一个ca证书
 4. 端口可能被占用，24800改为24801试试
 
+### 下载搜狗输入法
+1. 安装框架` sudo apt-get install fcitx`
+2. 解压`sogou sudo dpkg -i sogoupinyin_版本号_amd64.deb`
+3. 下载依赖项` sudo apt -f install`
+4. 系统里调整fcitx为默认框架
+5. 卸载 `ibus sudo apt purge ibus`
+6. 重启
