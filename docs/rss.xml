@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Mon, 09 Sep 2024 08:25:02 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>clash verge 规则</title><link>https://hnugryu.github.io//post/clash%20verge%20-gui-ze.html</link><description>## 怎么连接vpn后访问一些校园网站&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Mon, 09 Sep 2024 15:07:36 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>jupyter notebook</title><link>https://hnugryu.github.io//post/jupyter%20notebook.html</link><description>## 怎么样使用jupyter notebook&#13;
+1. 加入kernel&#13;
+`pip install --upgrade jupyter ipykernel`&#13;
+`sudo python3 -m ipykernel install --user --name pytorch_env`&#13;
+2. 直接`jupyter notebook`使用&#13;
+。</description><guid isPermaLink="true">https://hnugryu.github.io//post/jupyter%20notebook.html</guid><pubDate>Mon, 09 Sep 2024 15:07:07 +0000</pubDate></item><item><title>clash verge 规则</title><link>https://hnugryu.github.io//post/clash%20verge%20-gui-ze.html</link><description>## 怎么连接vpn后访问一些校园网站&#13;
 1. 找到要连接校园网的网站ip地址&#13;
 `nslookup gym.hnu.edu.cn`&#13;
 2. 在clash verge中加入这个IP地址&#13;
