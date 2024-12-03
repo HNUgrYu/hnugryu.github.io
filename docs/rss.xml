@@ -1,5 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Tue, 03 Dec 2024 02:50:33 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>思维方式</title><link>https://hnugryu.github.io//post/si-wei-fang-shi.html</link><description># 六顶思维帽&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Tue, 03 Dec 2024 03:07:22 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>相机标定小论文总结</title><link>https://hnugryu.github.io//post/xiang-ji-biao-ding-xiao-lun-wen-zong-jie.html</link><description># 方法论&#13;
+## 亚像素边缘提取&#13;
+- 实现方法：&#13;
+计算Zernike矩 （Amn（ m控制旋转  n控制多项式阶数）&#13;
+- 本质：&#13;
+类似泰勒展开，用正交基完成像素间的细化拟合，像素彼此的影响范围由ROI半径决定&#13;
+- 特性: &#13;
+1.正交性&#13;
+2.旋转不变性&#13;
+3.完备性&#13;
+。</description><guid isPermaLink="true">https://hnugryu.github.io//post/xiang-ji-biao-ding-xiao-lun-wen-zong-jie.html</guid><pubDate>Tue, 03 Dec 2024 03:07:00 +0000</pubDate></item><item><title>思维方式</title><link>https://hnugryu.github.io//post/si-wei-fang-shi.html</link><description># 六顶思维帽&#13;
 - 示例：讨论一个提议&#13;
 1. 蓝色 统领全局 控制管理全局思维过程&#13;
 2. 白色 理性与事实 从事实讲话，理性分析现状&#13;
