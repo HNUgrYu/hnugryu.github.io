@@ -29,11 +29,162 @@
 
 # 文献管理
 ## Zotero
-#10
-## 
+#10 文献管理实现部分展示
+![image](https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/8.png?raw=true)
+![image](https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/241203.png?raw=true)
+## 文献注意
+1. 不得使用未正式发表论文
+2. 中国人拼音名不能缩写
+3. 作者先姓后名
+4. 主要按照期刊要求更改
 # 格式
+## 公式
+### 注意事项
+1. 正文中不要使用Mathtype公式框，段落间距会很丑
+5. 可以统一更改公式格式，需要储存预置样式，格式化应用
+6. 公式编号使用mathtype自带右编号功能，正常为公式居中，但复制后如果公式字体或者论文要求格式改变无法自适应，需要制表符的参与
+7. 制表符的制作原理，按Tab键，使接下来的文本按照闲情设定好的对齐方式对齐到设置的固定位置，可以在视图中打开标尺功能，精确找到想设定位置
+### 斜体
+1. 通俗规定，变量为斜体，像单位、常量为正体
+2. 矩阵、向量、张量为加粗斜体
+# 图表制作
+## 字体
+1. 图表题比正文小半号，图表内容比图表题再小半号，表题为黑体
+2. 前后要调整段落间隔
+## 图表绘制
+1. 三线表先设置为无边框，再用边框刷1pt
+2. 联图的绘制最好放置在表格中，先固定表格大小，然后再插入图片，使其适应
+## 流程图绘制
+visio 、draw.io、PPT
+## 算法图绘制
+1. 确定输入输出参数
+2. 按步骤描述，和公式原理call back
+3. 重要算法可以画伪代码流程表
+## 原理图绘制
+1. Adobe illustrator绘制的不能在PPT里面修改，注意最后在ppt里面再添加字
+## 数据处理转换为图表
+### MATLAB
+1. 生成图像后记得放大，改字体字号，然后保存png，svg等格式，保证分辨率，如果发现很糊，记得检查导出是按位还是按向量
+2. 二维曲线三维展开
+```
+% MATLAB代码：修正填充区域至下方（y=0）
 
-# 图表制作。">
+% 定义数据范围
+x = linspace(0, 10, 100); % 定义x轴数据
+
+% 定义三个二维曲线（不同函数形式）
+y_red = x.^2;             % 红色曲线：y = x^2
+y_green = x.^2 + x;       % 绿色曲线：y = x^2 + x
+y_blue = x.^2 + 2*x;      % 蓝色曲线：y = x^2 + 2x
+
+% 定义三维图中Z轴的偏移位置（用于分开显示曲线）
+z_red = zeros(size(x));   % 红色曲线的Z位置
+z_green = ones(size(x));  % 绿色曲线的Z位置
+z_blue = 2 * ones(size(x)); % 蓝色曲线的Z位置
+
+% 创建三维图
+figure;
+hold on;
+
+% 填充红色曲线（向下到 y=0）
+fill3([x, fliplr(x)], [z_red, fliplr(z_red)], [y_red, zeros(size(y_red))], 'r', 'FaceAlpha', 0.5, 'EdgeColor', 'none');
+plot3(x, z_red, y_red, 'r', 'LineWidth', 2);
+
+% 填充绿色曲线（向下到 y=0）
+fill3([x, fliplr(x)], [z_green, fliplr(z_green)], [y_green, zeros(size(y_green))], 'g', 'FaceAlpha', 0.5, 'EdgeColor', 'none');
+plot3(x, z_green, y_green, 'g', 'LineWidth', 2);
+
+% 填充蓝色曲线（向下到 y=0）
+fill3([x, fliplr(x)], [z_blue, fliplr(z_blue)], [y_blue, zeros(size(y_blue))], 'b', 'FaceAlpha', 0.5, 'EdgeColor', 'none');
+plot3(x, z_blue, y_blue, 'b', 'LineWidth', 2);
+
+% 设置图形标签
+xlabel('X-axis (Time)');
+ylabel('Z-axis (Channel Offset)');
+zlabel('Y-axis (Function Value)');
+
+% 设置视角
+view(45, 30);
+
+% 添加图例
+legend({'Red Curve', 'Green Curve', 'Blue Curve'}, 'Location', 'northeast');
+
+% 美化图形
+grid on;
+title('3D Plot with Properly Filled 2D Curves');
+hold off;
+```
+![image](https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/QQ%E6%88%AA%E5%9B%BE20241203145111.png)
+3. 误差比较绘制
+```
+% 读取 CSV 文件为一个表格
+data = readtable('ygr_combined_data.csv');
+
+% 提取数据
+x = data{2:end, 1};
+y = data{2:end, 2};
+z = data{2:end, 3};
+
+% 创建一个3D图形
+figure;
+
+group = z; % 分组依据是 z 值
+
+% 设置每个组的颜色
+colors = [
+    0.1  0.2  0.5;  % 蓝色
+    0.8  0.2  0.2;  % 红色
+    0.2  0.8  0.2;  % 绿色
+    0.7  0.7  0;    % 黄色
+    0.3  0.8  0.8;  % 青色
+    0.8  0.5  0.2;  % 橙色
+    0.5  0.5  0.5;  % 灰色
+    0.9  0.1  0.9;  % 紫色
+    0.5  0.9  0.5;  % 浅绿色
+    0.8  0.3  0.8   % 深紫色
+];
+
+% 对每个组绘制散点
+hold on;
+for g = 1:5
+    % 绘制每一组的散点
+    scatter3(x(group == g), y(group == g), z(group == g), 90, 'MarkerFaceColor', colors(g,:), 'MarkerEdgeColor', 'k', 'LineWidth', 1);
+end
+
+% 创建网格，用于绘制 z 层的网格
+[xGrid, yGrid] = meshgrid(linspace(-0.4, 0.4,2), linspace(-0.4, 0.4, 2));
+
+% 为每个 z 层绘制网格
+for zLayer = 1:5
+    % 绘制网格线
+    mesh(xGrid, yGrid, zLayer * ones(size(xGrid)), 'EdgeColor', [0.5 0.5 0.5], 'FaceAlpha', 0);
+end
+
+% 设置坐标轴标签
+xlabel('u/像素');
+ylabel('v/像素');
+zlabel('组别');
+
+% 显示网格
+grid on;
+
+% 设置视角
+view(3);
+
+% 设置标题
+title('本文改进方法 平均重投影误差:0.00931像素');
+```
+
+![image](https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/uv_our.png?raw=true)
+
+### Python
+1. 
+
+
+
+
+
+。">
 <meta property="og:title" content="论文可视化小结">
 <meta property="og:description" content="# 数据加载与保存
 ## python
@@ -54,11 +205,162 @@
 
 # 文献管理
 ## Zotero
-#10
-## 
+#10 文献管理实现部分展示
+![image](https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/8.png?raw=true)
+![image](https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/241203.png?raw=true)
+## 文献注意
+1. 不得使用未正式发表论文
+2. 中国人拼音名不能缩写
+3. 作者先姓后名
+4. 主要按照期刊要求更改
 # 格式
+## 公式
+### 注意事项
+1. 正文中不要使用Mathtype公式框，段落间距会很丑
+5. 可以统一更改公式格式，需要储存预置样式，格式化应用
+6. 公式编号使用mathtype自带右编号功能，正常为公式居中，但复制后如果公式字体或者论文要求格式改变无法自适应，需要制表符的参与
+7. 制表符的制作原理，按Tab键，使接下来的文本按照闲情设定好的对齐方式对齐到设置的固定位置，可以在视图中打开标尺功能，精确找到想设定位置
+### 斜体
+1. 通俗规定，变量为斜体，像单位、常量为正体
+2. 矩阵、向量、张量为加粗斜体
+# 图表制作
+## 字体
+1. 图表题比正文小半号，图表内容比图表题再小半号，表题为黑体
+2. 前后要调整段落间隔
+## 图表绘制
+1. 三线表先设置为无边框，再用边框刷1pt
+2. 联图的绘制最好放置在表格中，先固定表格大小，然后再插入图片，使其适应
+## 流程图绘制
+visio 、draw.io、PPT
+## 算法图绘制
+1. 确定输入输出参数
+2. 按步骤描述，和公式原理call back
+3. 重要算法可以画伪代码流程表
+## 原理图绘制
+1. Adobe illustrator绘制的不能在PPT里面修改，注意最后在ppt里面再添加字
+## 数据处理转换为图表
+### MATLAB
+1. 生成图像后记得放大，改字体字号，然后保存png，svg等格式，保证分辨率，如果发现很糊，记得检查导出是按位还是按向量
+2. 二维曲线三维展开
+```
+% MATLAB代码：修正填充区域至下方（y=0）
 
-# 图表制作。">
+% 定义数据范围
+x = linspace(0, 10, 100); % 定义x轴数据
+
+% 定义三个二维曲线（不同函数形式）
+y_red = x.^2;             % 红色曲线：y = x^2
+y_green = x.^2 + x;       % 绿色曲线：y = x^2 + x
+y_blue = x.^2 + 2*x;      % 蓝色曲线：y = x^2 + 2x
+
+% 定义三维图中Z轴的偏移位置（用于分开显示曲线）
+z_red = zeros(size(x));   % 红色曲线的Z位置
+z_green = ones(size(x));  % 绿色曲线的Z位置
+z_blue = 2 * ones(size(x)); % 蓝色曲线的Z位置
+
+% 创建三维图
+figure;
+hold on;
+
+% 填充红色曲线（向下到 y=0）
+fill3([x, fliplr(x)], [z_red, fliplr(z_red)], [y_red, zeros(size(y_red))], 'r', 'FaceAlpha', 0.5, 'EdgeColor', 'none');
+plot3(x, z_red, y_red, 'r', 'LineWidth', 2);
+
+% 填充绿色曲线（向下到 y=0）
+fill3([x, fliplr(x)], [z_green, fliplr(z_green)], [y_green, zeros(size(y_green))], 'g', 'FaceAlpha', 0.5, 'EdgeColor', 'none');
+plot3(x, z_green, y_green, 'g', 'LineWidth', 2);
+
+% 填充蓝色曲线（向下到 y=0）
+fill3([x, fliplr(x)], [z_blue, fliplr(z_blue)], [y_blue, zeros(size(y_blue))], 'b', 'FaceAlpha', 0.5, 'EdgeColor', 'none');
+plot3(x, z_blue, y_blue, 'b', 'LineWidth', 2);
+
+% 设置图形标签
+xlabel('X-axis (Time)');
+ylabel('Z-axis (Channel Offset)');
+zlabel('Y-axis (Function Value)');
+
+% 设置视角
+view(45, 30);
+
+% 添加图例
+legend({'Red Curve', 'Green Curve', 'Blue Curve'}, 'Location', 'northeast');
+
+% 美化图形
+grid on;
+title('3D Plot with Properly Filled 2D Curves');
+hold off;
+```
+![image](https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/QQ%E6%88%AA%E5%9B%BE20241203145111.png)
+3. 误差比较绘制
+```
+% 读取 CSV 文件为一个表格
+data = readtable('ygr_combined_data.csv');
+
+% 提取数据
+x = data{2:end, 1};
+y = data{2:end, 2};
+z = data{2:end, 3};
+
+% 创建一个3D图形
+figure;
+
+group = z; % 分组依据是 z 值
+
+% 设置每个组的颜色
+colors = [
+    0.1  0.2  0.5;  % 蓝色
+    0.8  0.2  0.2;  % 红色
+    0.2  0.8  0.2;  % 绿色
+    0.7  0.7  0;    % 黄色
+    0.3  0.8  0.8;  % 青色
+    0.8  0.5  0.2;  % 橙色
+    0.5  0.5  0.5;  % 灰色
+    0.9  0.1  0.9;  % 紫色
+    0.5  0.9  0.5;  % 浅绿色
+    0.8  0.3  0.8   % 深紫色
+];
+
+% 对每个组绘制散点
+hold on;
+for g = 1:5
+    % 绘制每一组的散点
+    scatter3(x(group == g), y(group == g), z(group == g), 90, 'MarkerFaceColor', colors(g,:), 'MarkerEdgeColor', 'k', 'LineWidth', 1);
+end
+
+% 创建网格，用于绘制 z 层的网格
+[xGrid, yGrid] = meshgrid(linspace(-0.4, 0.4,2), linspace(-0.4, 0.4, 2));
+
+% 为每个 z 层绘制网格
+for zLayer = 1:5
+    % 绘制网格线
+    mesh(xGrid, yGrid, zLayer * ones(size(xGrid)), 'EdgeColor', [0.5 0.5 0.5], 'FaceAlpha', 0);
+end
+
+% 设置坐标轴标签
+xlabel('u/像素');
+ylabel('v/像素');
+zlabel('组别');
+
+% 显示网格
+grid on;
+
+% 设置视角
+view(3);
+
+% 设置标题
+title('本文改进方法 平均重投影误差:0.00931像素');
+```
+
+![image](https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/uv_our.png?raw=true)
+
+### Python
+1. 
+
+
+
+
+
+。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hnugryu.github.io//post/lun-wen-ke-shi-hua-xiao-jie.html">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg">
@@ -87,7 +389,17 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     body {padding: 8px;}
     .postTitle{font-size:24px;}
 }
-
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
 </style>
 
 
@@ -145,10 +457,170 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 2.np.savetxt（fname，arr）保存类型为文件后缀</p>
 <h1>文献管理</h1>
 <h2>Zotero</h2>
-<p>#10</p>
-<h2></h2>
+<p>#10 文献管理实现部分展示<br>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/8.png?raw=true"><img src="https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/8.png?raw=true" alt="image" style="max-width: 100%;"></a><br>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/241203.png?raw=true"><img src="https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/241203.png?raw=true" alt="image" style="max-width: 100%;"></a></p>
+<h2>文献注意</h2>
+<ol>
+<li>不得使用未正式发表论文</li>
+<li>中国人拼音名不能缩写</li>
+<li>作者先姓后名</li>
+<li>主要按照期刊要求更改</li>
+</ol>
 <h1>格式</h1>
-<h1>图表制作</h1></div>
+<h2>公式</h2>
+<h3>注意事项</h3>
+<ol>
+<li>正文中不要使用Mathtype公式框，段落间距会很丑</li>
+<li>可以统一更改公式格式，需要储存预置样式，格式化应用</li>
+<li>公式编号使用mathtype自带右编号功能，正常为公式居中，但复制后如果公式字体或者论文要求格式改变无法自适应，需要制表符的参与</li>
+<li>制表符的制作原理，按Tab键，使接下来的文本按照闲情设定好的对齐方式对齐到设置的固定位置，可以在视图中打开标尺功能，精确找到想设定位置</li>
+</ol>
+<h3>斜体</h3>
+<ol>
+<li>通俗规定，变量为斜体，像单位、常量为正体</li>
+<li>矩阵、向量、张量为加粗斜体</li>
+</ol>
+<h1>图表制作</h1>
+<h2>字体</h2>
+<ol>
+<li>图表题比正文小半号，图表内容比图表题再小半号，表题为黑体</li>
+<li>前后要调整段落间隔</li>
+</ol>
+<h2>图表绘制</h2>
+<ol>
+<li>三线表先设置为无边框，再用边框刷1pt</li>
+<li>联图的绘制最好放置在表格中，先固定表格大小，然后再插入图片，使其适应</li>
+</ol>
+<h2>流程图绘制</h2>
+<p>visio 、draw.io、PPT</p>
+<h2>算法图绘制</h2>
+<ol>
+<li>确定输入输出参数</li>
+<li>按步骤描述，和公式原理call back</li>
+<li>重要算法可以画伪代码流程表</li>
+</ol>
+<h2>原理图绘制</h2>
+<ol>
+<li>Adobe illustrator绘制的不能在PPT里面修改，注意最后在ppt里面再添加字</li>
+</ol>
+<h2>数据处理转换为图表</h2>
+<h3>MATLAB</h3>
+<ol>
+<li>生成图像后记得放大，改字体字号，然后保存png，svg等格式，保证分辨率，如果发现很糊，记得检查导出是按位还是按向量</li>
+<li>二维曲线三维展开</li>
+</ol>
+<pre class="notranslate"><code class="notranslate">% MATLAB代码：修正填充区域至下方（y=0）
+
+% 定义数据范围
+x = linspace(0, 10, 100); % 定义x轴数据
+
+% 定义三个二维曲线（不同函数形式）
+y_red = x.^2;             % 红色曲线：y = x^2
+y_green = x.^2 + x;       % 绿色曲线：y = x^2 + x
+y_blue = x.^2 + 2*x;      % 蓝色曲线：y = x^2 + 2x
+
+% 定义三维图中Z轴的偏移位置（用于分开显示曲线）
+z_red = zeros(size(x));   % 红色曲线的Z位置
+z_green = ones(size(x));  % 绿色曲线的Z位置
+z_blue = 2 * ones(size(x)); % 蓝色曲线的Z位置
+
+% 创建三维图
+figure;
+hold on;
+
+% 填充红色曲线（向下到 y=0）
+fill3([x, fliplr(x)], [z_red, fliplr(z_red)], [y_red, zeros(size(y_red))], 'r', 'FaceAlpha', 0.5, 'EdgeColor', 'none');
+plot3(x, z_red, y_red, 'r', 'LineWidth', 2);
+
+% 填充绿色曲线（向下到 y=0）
+fill3([x, fliplr(x)], [z_green, fliplr(z_green)], [y_green, zeros(size(y_green))], 'g', 'FaceAlpha', 0.5, 'EdgeColor', 'none');
+plot3(x, z_green, y_green, 'g', 'LineWidth', 2);
+
+% 填充蓝色曲线（向下到 y=0）
+fill3([x, fliplr(x)], [z_blue, fliplr(z_blue)], [y_blue, zeros(size(y_blue))], 'b', 'FaceAlpha', 0.5, 'EdgeColor', 'none');
+plot3(x, z_blue, y_blue, 'b', 'LineWidth', 2);
+
+% 设置图形标签
+xlabel('X-axis (Time)');
+ylabel('Z-axis (Channel Offset)');
+zlabel('Y-axis (Function Value)');
+
+% 设置视角
+view(45, 30);
+
+% 添加图例
+legend({'Red Curve', 'Green Curve', 'Blue Curve'}, 'Location', 'northeast');
+
+% 美化图形
+grid on;
+title('3D Plot with Properly Filled 2D Curves');
+hold off;
+</code></pre>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/QQ%E6%88%AA%E5%9B%BE20241203145111.png"><img src="https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/QQ%E6%88%AA%E5%9B%BE20241203145111.png" alt="image" style="max-width: 100%;"></a><br>
+3. 误差比较绘制</p>
+<pre class="notranslate"><code class="notranslate">% 读取 CSV 文件为一个表格
+data = readtable('ygr_combined_data.csv');
+
+% 提取数据
+x = data{2:end, 1};
+y = data{2:end, 2};
+z = data{2:end, 3};
+
+% 创建一个3D图形
+figure;
+
+group = z; % 分组依据是 z 值
+
+% 设置每个组的颜色
+colors = [
+    0.1  0.2  0.5;  % 蓝色
+    0.8  0.2  0.2;  % 红色
+    0.2  0.8  0.2;  % 绿色
+    0.7  0.7  0;    % 黄色
+    0.3  0.8  0.8;  % 青色
+    0.8  0.5  0.2;  % 橙色
+    0.5  0.5  0.5;  % 灰色
+    0.9  0.1  0.9;  % 紫色
+    0.5  0.9  0.5;  % 浅绿色
+    0.8  0.3  0.8   % 深紫色
+];
+
+% 对每个组绘制散点
+hold on;
+for g = 1:5
+    % 绘制每一组的散点
+    scatter3(x(group == g), y(group == g), z(group == g), 90, 'MarkerFaceColor', colors(g,:), 'MarkerEdgeColor', 'k', 'LineWidth', 1);
+end
+
+% 创建网格，用于绘制 z 层的网格
+[xGrid, yGrid] = meshgrid(linspace(-0.4, 0.4,2), linspace(-0.4, 0.4, 2));
+
+% 为每个 z 层绘制网格
+for zLayer = 1:5
+    % 绘制网格线
+    mesh(xGrid, yGrid, zLayer * ones(size(xGrid)), 'EdgeColor', [0.5 0.5 0.5], 'FaceAlpha', 0);
+end
+
+% 设置坐标轴标签
+xlabel('u/像素');
+ylabel('v/像素');
+zlabel('组别');
+
+% 显示网格
+grid on;
+
+% 设置视角
+view(3);
+
+% 设置标题
+title('本文改进方法 平均重投影误差:0.00931像素');
+</code></pre>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/uv_our.png?raw=true"><img src="https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/uv_our.png?raw=true" alt="image" style="max-width: 100%;"></a></p>
+<h3>Python</h3>
+<ol>
+<li></li>
+</ol></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载请注明出处</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -173,7 +645,7 @@ if("08/26/2024"!=""){
 </script></div>
 </body>
 <script>
-var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
 var utterancesLoad=0;
 
 let themeSettings={
@@ -246,7 +718,70 @@ function iFrameLoading(){
     }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
 
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
 
 </script>
 <script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>
