@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Tue, 03 Dec 2024 06:59:23 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>相机标定小论文总结</title><link>https://hnugryu.github.io//post/xiang-ji-biao-ding-xiao-lun-wen-zong-jie.html</link><description># 方法论&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Tue, 03 Dec 2024 07:02:42 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>相机标定小论文总结</title><link>https://hnugryu.github.io//post/xiang-ji-biao-ding-xiao-lun-wen-zong-jie.html</link><description># 方法论&#13;
 ## 亚像素边缘提取&#13;
 - 实现方法：&#13;
 计算Zernike矩 （Amn（ m控制旋转  n控制多项式阶数）&#13;
@@ -183,8 +183,6 @@ title('本文改进方法 平均重投影误差:0.00931像素');&#13;
 &#13;
 ![image](https://github.com/HNUgrYu/hnugryu.github.io/blob/main/static/uv_our.png?raw=true)&#13;
 &#13;
-### Python&#13;
-1. &#13;
 &#13;
 &#13;
 &#13;
