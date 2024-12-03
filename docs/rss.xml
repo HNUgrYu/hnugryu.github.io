@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Tue, 03 Dec 2024 02:44:27 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>论文可视化小结</title><link>https://hnugryu.github.io//post/lun-wen-ke-shi-hua-xiao-jie.html</link><guid isPermaLink="true">https://hnugryu.github.io//post/lun-wen-ke-shi-hua-xiao-jie.html</guid><pubDate>Tue, 03 Dec 2024 02:44:00 +0000</pubDate></item><item><title>是conda啊</title><link>https://hnugryu.github.io//post/shi-conda-a.html</link><description>#常见命令&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Tue, 03 Dec 2024 02:50:33 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>思维方式</title><link>https://hnugryu.github.io//post/si-wei-fang-shi.html</link><description># 六顶思维帽&#13;
+- 示例：讨论一个提议&#13;
+1. 蓝色 统领全局 控制管理全局思维过程&#13;
+2. 白色 理性与事实 从事实讲话，理性分析现状&#13;
+3. 红色 感性 只从第一感觉出发&#13;
+4. 绿色 创造性 提出新思路&#13;
+5. 黑色 批判性 消极的分析其劣势&#13;
+6. 黄色 积极与机会 积极的想会产生什么好的yingxiang。</description><guid isPermaLink="true">https://hnugryu.github.io//post/si-wei-fang-shi.html</guid><pubDate>Tue, 03 Dec 2024 02:50:08 +0000</pubDate></item><item><title>论文可视化小结</title><link>https://hnugryu.github.io//post/lun-wen-ke-shi-hua-xiao-jie.html</link><guid isPermaLink="true">https://hnugryu.github.io//post/lun-wen-ke-shi-hua-xiao-jie.html</guid><pubDate>Tue, 03 Dec 2024 02:44:00 +0000</pubDate></item><item><title>是conda啊</title><link>https://hnugryu.github.io//post/shi-conda-a.html</link><description>#常见命令&#13;
 1.创建新环境&#13;
 ` conda create --name &lt;环境名称&gt; python=&lt;版本&gt; `&#13;
 2.加载新环境&#13;
