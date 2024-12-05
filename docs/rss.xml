@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Tue, 03 Dec 2024 07:02:42 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>相机标定小论文总结</title><link>https://hnugryu.github.io//post/xiang-ji-biao-ding-xiao-lun-wen-zong-jie.html</link><description># 方法论&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Thu, 05 Dec 2024 07:53:45 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>深度学习小结</title><link>https://hnugryu.github.io//post/shen-du-xue-xi-xiao-jie.html</link><description># 前瞻&#13;
+## 核心&#13;
+预测结果：&#13;
+1.我们想要什么&#13;
+2.某个行为的结果&#13;
+3.世界如何改变，即未来趋势&#13;
+4.达成某个目的的实现方法&#13;
+实现过程：&#13;
+- 找到输入与输出的抽象联系，属于统计思维，而非传统计算机科学算法的准确性思维。</description><guid isPermaLink="true">https://hnugryu.github.io//post/shen-du-xue-xi-xiao-jie.html</guid><pubDate>Thu, 05 Dec 2024 07:53:22 +0000</pubDate></item><item><title>相机标定小论文总结</title><link>https://hnugryu.github.io//post/xiang-ji-biao-ding-xiao-lun-wen-zong-jie.html</link><description># 方法论&#13;
 ## 亚像素边缘提取&#13;
 - 实现方法：&#13;
 计算Zernike矩 （Amn（ m控制旋转  n控制多项式阶数）&#13;
