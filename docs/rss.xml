@@ -1,5 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Thu, 19 Dec 2024 05:31:55 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>docker使用指南</title><link>https://hnugryu.github.io//post/docker-shi-yong-zhi-nan.html</link><guid isPermaLink="true">https://hnugryu.github.io//post/docker-shi-yong-zhi-nan.html</guid><pubDate>Thu, 19 Dec 2024 05:31:26 +0000</pubDate></item><item><title>Ubuntu重新归来</title><link>https://hnugryu.github.io//post/Ubuntu-zhong-xin-gui-lai.html</link><description>&gt; 用移动硬盘作为ubuntu系统盘，实现双系统&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Thu, 19 Dec 2024 05:42:39 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>docker使用指南</title><link>https://hnugryu.github.io//post/docker-shi-yong-zhi-nan.html</link><description>[pytorch Docker Hub](https://hub.docker.com/r/pytorch/pytorch)&#13;
+[使用文档](https://docs.docker.com/desktop/setup/sign-in/#whats-next)&#13;
+```&#13;
+sudo systemctl start docker&#13;
+sudo systemctl enable docker&#13;
+docker --version&#13;
+```&#13;
+拉取文件&#13;
+`docker pull &lt;image-name&gt;:&lt;tag&gt;`&#13;
+根据镜像创建容器&#13;
+`docker run -it --name pytorch-container pytorch/pytorch`&#13;
+查看容器&#13;
+`docker ps -a`&#13;
+退出容器&#13;
+`exit`。</description><guid isPermaLink="true">https://hnugryu.github.io//post/docker-shi-yong-zhi-nan.html</guid><pubDate>Thu, 19 Dec 2024 05:31:26 +0000</pubDate></item><item><title>Ubuntu重新归来</title><link>https://hnugryu.github.io//post/Ubuntu-zhong-xin-gui-lai.html</link><description>&gt; 用移动硬盘作为ubuntu系统盘，实现双系统&#13;
 # 前期提要&#13;
 #6 &#13;
 # 实现步骤&#13;
