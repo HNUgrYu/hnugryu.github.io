@@ -40,17 +40,22 @@ Categories=Development;IDE;
 Terminal=false
 ```
 # 文件备份 启动盘下完成（需提前用timeshift创建快照）
+```
 sudo apt update
 sudo apt install timeshift
+```
 分区确定
+```
 sudo fdisk -l
 lsblk
+```
 文件复原
+```
 sudo mkdir /etc/timeshift
 sudo mount /dev/sdb2 /etc/timeshift
 sudo timeshift-launcher
 
-
+```
 
 
 。">
@@ -85,17 +90,22 @@ Categories=Development;IDE;
 Terminal=false
 ```
 # 文件备份 启动盘下完成（需提前用timeshift创建快照）
+```
 sudo apt update
 sudo apt install timeshift
+```
 分区确定
+```
 sudo fdisk -l
 lsblk
+```
 文件复原
+```
 sudo mkdir /etc/timeshift
 sudo mount /dev/sdb2 /etc/timeshift
 sudo timeshift-launcher
 
-
+```
 
 
 。">
@@ -202,15 +212,19 @@ Categories=Development;IDE;
 Terminal=false
 </code></pre>
 <h1>文件备份 启动盘下完成（需提前用timeshift创建快照）</h1>
-<p>sudo apt update<br>
-sudo apt install timeshift<br>
-分区确定<br>
-sudo fdisk -l<br>
-lsblk<br>
-文件复原<br>
-sudo mkdir /etc/timeshift<br>
-sudo mount /dev/sdb2 /etc/timeshift<br>
-sudo timeshift-launcher</p></div>
+<pre class="notranslate"><code class="notranslate">sudo apt update
+sudo apt install timeshift
+</code></pre>
+<p>分区确定</p>
+<pre class="notranslate"><code class="notranslate">sudo fdisk -l
+lsblk
+</code></pre>
+<p>文件复原</p>
+<pre class="notranslate"><code class="notranslate">sudo mkdir /etc/timeshift
+sudo mount /dev/sdb2 /etc/timeshift
+sudo timeshift-launcher
+
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载请注明出处</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
