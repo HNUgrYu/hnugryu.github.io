@@ -27,4 +27,17 @@ Comment=Develop with pleasure!
 Categories=Development;IDE;
 Terminal=false
 ```
-9. 
+# 文件备份 启动盘下完成（需提前用timeshift创建快照）
+sudo apt update
+sudo apt install timeshift
+分区确定
+sudo fdisk -l
+lsblk
+文件复原
+sudo mkdir /etc/timeshift
+sudo mount /dev/sdb2 /etc/timeshift
+sudo timeshift-launcher
+
+
+
+
