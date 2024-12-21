@@ -44,5 +44,7 @@ sudo mount /dev/sdb2 /etc/timeshift
 sudo timeshift-launcher
 
 ```
-
-
+# Latex
+sudo apt update
+sudo apt intall texlive-full
+配置中选择xelatex
