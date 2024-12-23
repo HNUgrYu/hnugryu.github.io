@@ -11,3 +11,8 @@
 `conda deactivate`
 6.删除环境
 `conda remove --name <环境名称> --all`
+7.输出环境列表
+`conda env export > environment.yml`
+8.重建环境
+`conda env create -f environment.yml`
+
