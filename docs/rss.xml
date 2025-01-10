@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Mon, 23 Dec 2024 09:45:20 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>docker使用指南</title><link>https://hnugryu.github.io//post/docker-shi-yong-zhi-nan.html</link><description>[pytorch Docker Hub](https://hub.docker.com/r/pytorch/pytorch)&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Fri, 10 Jan 2025 07:28:36 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>docker使用指南</title><link>https://hnugryu.github.io//post/docker-shi-yong-zhi-nan.html</link><description>[pytorch Docker Hub](https://hub.docker.com/r/pytorch/pytorch)&#13;
 [使用文档](https://docs.docker.com/desktop/setup/sign-in/#whats-next)&#13;
 # 常用指令&#13;
 更改后重新启动&#13;
@@ -313,7 +313,9 @@ snake = active_contour(image_smooth, init, alpha=0.01, beta=10, gamma=0.001)&#13
 &gt; office分为很多个版本，可以从账户看到自己的版本信息。</description><guid isPermaLink="true">https://hnugryu.github.io//post/yi-xie-ling-sui-de-wen-ti-jie-jue-fang-an.html</guid><pubDate>Thu, 26 Sep 2024 13:46:21 +0000</pubDate></item><item><title>jupyter notebook</title><link>https://hnugryu.github.io//post/jupyter%20notebook.html</link><description>## 怎么样使用jupyter notebook&#13;
 1. 加入kernel&#13;
 `pip install --upgrade jupyter ipykernel`&#13;
-`sudo python3 -m ipykernel install --user --name pytorch_env`&#13;
+`python -m ipykernel install --user --name pytorch_env --display-name 'Python (PyTorch Env)'`&#13;
+&#13;
+&#13;
 2. 直接`jupyter notebook`使用&#13;
 。</description><guid isPermaLink="true">https://hnugryu.github.io//post/jupyter%20notebook.html</guid><pubDate>Mon, 09 Sep 2024 15:07:07 +0000</pubDate></item><item><title>clash verge 规则</title><link>https://hnugryu.github.io//post/clash%20verge%20-gui-ze.html</link><description>## 怎么连接vpn后访问一些校园网站&#13;
 1. 找到要连接校园网的网站ip地址&#13;
