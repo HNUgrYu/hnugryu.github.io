@@ -1,12 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Mon, 10 Feb 2025 13:49:47 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>ubuntu 常见问题</title><link>https://hnugryu.github.io//post/ubuntu%20-chang-jian-wen-ti.html</link><description># pip install显示错误
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Tue, 11 Feb 2025 02:53:53 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>ubuntu 常见问题</title><link>https://hnugryu.github.io//post/ubuntu%20-chang-jian-wen-ti.html</link><description># pip install显示错误
 ERROR: Could not find a version that satisfies the requirement python (from versions: none)
 
 ERROR: No matching distribution found for python
-## 解决方法
-删除代理配置
+## 删除代理配置
 nano ～/.config/pip/pip.conf
-。</description><guid isPermaLink="true">https://hnugryu.github.io//post/ubuntu%20-chang-jian-wen-ti.html</guid><pubDate>Mon, 10 Feb 2025 13:49:23 +0000</pubDate></item><item><title>docker使用指南</title><link>https://hnugryu.github.io//post/docker-shi-yong-zhi-nan.html</link><description>[pytorch Docker Hub](https://hub.docker.com/r/pytorch/pytorch)&#13;
+
+# 桌面dock图标显示错乱
+## desktop文件不应该放在桌面
+mv ~/桌面/zotero.desktop ~/.local/share/applications/。</description><guid isPermaLink="true">https://hnugryu.github.io//post/ubuntu%20-chang-jian-wen-ti.html</guid><pubDate>Mon, 10 Feb 2025 13:49:23 +0000</pubDate></item><item><title>docker使用指南</title><link>https://hnugryu.github.io//post/docker-shi-yong-zhi-nan.html</link><description>[pytorch Docker Hub](https://hub.docker.com/r/pytorch/pytorch)&#13;
 [使用文档](https://docs.docker.com/desktop/setup/sign-in/#whats-next)&#13;
 # 常用指令&#13;
 更改后重新启动&#13;
