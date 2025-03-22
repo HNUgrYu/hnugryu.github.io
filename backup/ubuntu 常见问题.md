@@ -1,7 +1,7 @@
 # pip install显示错误
-ERROR: Could not find a version that satisfies the requirement python (from versions: none)
+```ERROR: Could not find a version that satisfies the requirement python (from versions: none)
 
-ERROR: No matching distribution found for python
+ERROR: No matching distribution found for python```
 ## 删除代理配置
 `nano ～/.config/pip/pip.conf`
 
@@ -9,4 +9,10 @@ ERROR: No matching distribution found for python
 ## desktop文件不应该放在桌面
 `mv ~/桌面/zotero.desktop ~/.local/share/applications/`
 
-# 
+# 备份问题
+## 系统备份
+`timeshift`
+## 环境备份
+`pip freeze > requirements_backup.txt`
+
+

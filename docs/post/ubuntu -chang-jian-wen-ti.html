@@ -11,9 +11,9 @@
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
 <meta name="description" content="# pip install显示错误
-ERROR: Could not find a version that satisfies the requirement python (from versions: none)
+```ERROR: Could not find a version that satisfies the requirement python (from versions: none)
 
-ERROR: No matching distribution found for python
+ERROR: No matching distribution found for python```
 ## 删除代理配置
 `nano ～/.config/pip/pip.conf`
 
@@ -21,12 +21,19 @@ ERROR: No matching distribution found for python
 ## desktop文件不应该放在桌面
 `mv ~/桌面/zotero.desktop ~/.local/share/applications/`
 
-# 。">
+# 备份问题
+## 系统备份
+`timeshift`
+## 环境备份
+`pip freeze > requirements_backup.txt`
+
+
+。">
 <meta property="og:title" content="ubuntu 常见问题">
 <meta property="og:description" content="# pip install显示错误
-ERROR: Could not find a version that satisfies the requirement python (from versions: none)
+```ERROR: Could not find a version that satisfies the requirement python (from versions: none)
 
-ERROR: No matching distribution found for python
+ERROR: No matching distribution found for python```
 ## 删除代理配置
 `nano ～/.config/pip/pip.conf`
 
@@ -34,7 +41,14 @@ ERROR: No matching distribution found for python
 ## desktop文件不应该放在桌面
 `mv ~/桌面/zotero.desktop ~/.local/share/applications/`
 
-# 。">
+# 备份问题
+## 系统备份
+`timeshift`
+## 环境备份
+`pip freeze > requirements_backup.txt`
+
+
+。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hnugryu.github.io//post/ubuntu%20-chang-jian-wen-ti.html">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg">
@@ -96,14 +110,23 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
     <div id="content">
 <div class="markdown-body" id="postBody"><h1>pip install显示错误</h1>
-<p>ERROR: Could not find a version that satisfies the requirement python (from versions: none)</p>
-<p>ERROR: No matching distribution found for python</p>
-<h2>删除代理配置</h2>
-<p><code class="notranslate">nano ～/.config/pip/pip.conf</code></p>
-<h1>桌面dock图标显示错乱</h1>
-<h2>desktop文件不应该放在桌面</h2>
-<p><code class="notranslate">mv ~/桌面/zotero.desktop ~/.local/share/applications/</code></p>
-<h1></h1></div>
+<pre lang="ERROR:" data-meta="Could not find a version that satisfies the requirement python (from versions: none)" class="notranslate"><code class="notranslate">
+ERROR: No matching distribution found for python```
+## 删除代理配置
+`nano ～/.config/pip/pip.conf`
+
+# 桌面dock图标显示错乱
+## desktop文件不应该放在桌面
+`mv ~/桌面/zotero.desktop ~/.local/share/applications/`
+
+# 备份问题
+## 系统备份
+`timeshift`
+## 环境备份
+`pip freeze &gt; requirements_backup.txt`
+
+
+</code></pre></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载请注明出处</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
