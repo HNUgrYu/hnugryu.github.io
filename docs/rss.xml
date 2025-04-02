@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Wed, 02 Apr 2025 02:54:57 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>测试开发工程师核心Q&amp;A</title><link>https://hnugryu.github.io//post/ce-shi-kai-fa-gong-cheng-shi-he-xin-Q%26A.html</link><description># 专业问题
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Wed, 02 Apr 2025 13:12:55 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>测试开发工程师核心Q&amp;A</title><link>https://hnugryu.github.io//post/ce-shi-kai-fa-gong-cheng-shi-he-xin-Q%26A.html</link><description># 专业问题
 - 测试内容划分
 1.功能测试
 2.性能测试
@@ -27,7 +27,24 @@
 4.条件覆盖
 5.循环测试
 6.数据流测试
-- 。</description><guid isPermaLink="true">https://hnugryu.github.io//post/ce-shi-kai-fa-gong-cheng-shi-he-xin-Q%26A.html</guid><pubDate>Wed, 02 Apr 2025 02:54:37 +0000</pubDate></item><item><title>ubuntu 常见问题</title><link>https://hnugryu.github.io//post/ubuntu%20-chang-jian-wen-ti.html</link><description># pip install显示错误
+- 死锁的四个条件
+死锁：当多个实体（如线程、进程）因争夺资源而陷入无限等待时，若无外部干预，所有相关实体都无法继续执行
+1.互斥
+2.持有并等待
+3.循环
+4.不能抢占
+- 线程与进程
+线程：线程是进程内的一个执行单元，多个线程共享进程的资源（如内存空间、文件描述符等）
+在线性代数计算、图像处理等场景中，多个计算任务可以并行执行;GUI应用程序（如浏览器、文本编辑器等）通常会使用线程来分别处理界面交互和后台计算
+进程：进程是操作系统分配资源的基本单位，每个进程都有独立的地址空间、代码、数据、堆栈等
+多任务操作系统，大规模数据处理
+协程：是比线程更轻量级的执行单元
+爬虫和大规模的网络请求，高并发的I/O密集型任务，如网络请求、数据库查询、文件操作
+- 七层网络结构
+物理层——链路层——网络层IP——传输层TCP——会话层——表示层——应用层
+- get和post的区别
+定义：HTTP 协议中，GET 和 POST 是两种最常用的请求方法
+get：主要用于从服务器获取资源，即多次请求同一资源不会改变服务器状态。</description><guid isPermaLink="true">https://hnugryu.github.io//post/ce-shi-kai-fa-gong-cheng-shi-he-xin-Q%26A.html</guid><pubDate>Wed, 02 Apr 2025 02:54:37 +0000</pubDate></item><item><title>ubuntu 常见问题</title><link>https://hnugryu.github.io//post/ubuntu%20-chang-jian-wen-ti.html</link><description># pip install显示错误
 ```ERROR: Could not find a version that satisfies the requirement python (from versions: none)
 
 ERROR: No matching distribution found for python```
