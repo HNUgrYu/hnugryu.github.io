@@ -1,5 +1,33 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Sat, 22 Mar 2025 16:19:55 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>ubuntu 常见问题</title><link>https://hnugryu.github.io//post/ubuntu%20-chang-jian-wen-ti.html</link><description># pip install显示错误
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>小余blog</title><link>https://hnugryu.github.io/</link><description>只要你是开心的，这条路怎么走都没关系</description><copyright>小余blog</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://raw.githubusercontent.com/HNUgrYu/gryu.github.io/main/static/favicon.ico</url><title>avatar</title><link>https://hnugryu.github.io/</link></image><lastBuildDate>Wed, 02 Apr 2025 02:54:57 +0000</lastBuildDate><managingEditor>小余blog</managingEditor><ttl>60</ttl><webMaster>小余blog</webMaster><item><title>测试开发工程师核心Q&amp;A</title><link>https://hnugryu.github.io//post/ce-shi-kai-fa-gong-cheng-shi-he-xin-Q%26A.html</link><description># 专业问题
+- 测试内容划分
+1.功能测试
+2.性能测试
+3.UI设计
+4.兼容性测试
+5.安全测试
+6.网络测试
+- 开发流程
+需求分析——用例开发——环境搭建——测试执行——测试报告——上线维护
+- 测试用例的组成
+类别 编号 名称 目的 前置条件 测试数据 执行步骤 预期结果 实际结果 优先级 通过与否 备注
+- 黑盒测试和白盒测试的区别
+黑盒测试：根据需求设计
+常用方法：
+1.等价划分——多输入问题
+2.边界值分析——有边界条件问题
+3.判定表测试——输入有多个条件且每个条件都有多个可能值
+4.状态转化测试——如登录系统有转化问题
+5.因果图——关注逻辑问题
+6.错误推断法——经验推断
+白盒测试：内部实现
+1.语句覆盖
+2.分支覆盖
+3.路径覆盖
+4.条件覆盖
+5.循环测试
+6.数据流测试
+- 。</description><guid isPermaLink="true">https://hnugryu.github.io//post/ce-shi-kai-fa-gong-cheng-shi-he-xin-Q%26A.html</guid><pubDate>Wed, 02 Apr 2025 02:54:37 +0000</pubDate></item><item><title>ubuntu 常见问题</title><link>https://hnugryu.github.io//post/ubuntu%20-chang-jian-wen-ti.html</link><description># pip install显示错误
 ```ERROR: Could not find a version that satisfies the requirement python (from versions: none)
 
 ERROR: No matching distribution found for python```
